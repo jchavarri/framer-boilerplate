@@ -18,7 +18,8 @@ gulp.task('html', function() {
   gulp.src(['./*.html'])
     .pipe(connect.reload());
 });
- 
+
+// Recipe from http://www.uberbrady.com/2015/05/how-to-do-gulp-browserify-coffeescript.html
 gulp.task('coffee', function() {
   browserify({
     entries: ["./app/app.coffee"],
