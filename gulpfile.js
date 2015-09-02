@@ -1,9 +1,10 @@
-var gulp = require('gulp'),
-  connect = require('gulp-connect'),
-  watch = require('gulp-watch'),
-  plumber = require('gulp-plumber');
-  browserify = require('gulp-browserify');
-  concat = require('gulp-concat');
+var gulp      = require('gulp'),
+  connect     = require('gulp-connect'),
+  watch       = require('gulp-watch'),
+  sourcemaps  = require('gulp-sourcemaps');
+  browserify  = require('browserify');
+  buffer      = require('vinyl-buffer'); // to transform the browserify results into a 'stream'
+  source      = require('vinyl-source-stream'); //to 'rename' your resulting file
 
 gulp.task('webserver', function() {
   connect.server({
@@ -19,12 +20,25 @@ gulp.task('html', function() {
 });
  
 gulp.task('coffee', function() {
-  gulp.src('./app/app.coffee', { read: false })
-    .pipe(plumber())
-    .pipe(browserify({ transform: ['coffeeify'], extensions: ['.coffee'] }))
-    .pipe(concat('app.js'))
-    .pipe(gulp.dest('build'))
-    .pipe(connect.reload());
+  browserify({
+    entries: ["./app/app.coffee"],
+    debug: true,
+    extensions: [".coffee"],
+    transform: ["coffeeify"] // npm install --save-dev coffeeify
+    })
+  .bundle()
+  .pipe(source('app.js'))
+  .pipe(buffer())
+  .pipe(sourcemaps.init({loadMaps: true,debug: true}))
+  // .pipe(uglify( {
+  //       debug: true,
+  //       options: {
+  //         sourceMap: true,
+  //       }
+  //   }))
+  .pipe(sourcemaps.write("./" /* optional second param here */))
+  .pipe(gulp.dest('build'))
+  .pipe(connect.reload());
 });
  
 gulp.task('watch', function() {
