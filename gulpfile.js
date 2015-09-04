@@ -5,6 +5,7 @@ var gulp      = require('gulp'),
   browserify  = require('browserify');
   buffer      = require('vinyl-buffer'); // to transform the browserify results into a 'stream'
   source      = require('vinyl-source-stream'); //to 'rename' your resulting file
+  gutil       = require('gulp-util');
 
 gulp.task('webserver', function() {
   connect.server({
@@ -28,6 +29,12 @@ gulp.task('coffee', function() {
     transform: ["coffeeify"] // npm install --save-dev coffeeify
     })
   .bundle()
+  .on('error', function(err){
+    gutil.log(
+      gutil.colors.red("Browserify compile error:"), 
+      err.toString()
+    );
+  })
   .pipe(source('app.js'))
   .pipe(buffer())
   .pipe(sourcemaps.init({loadMaps: true,debug: true}))
