@@ -16,8 +16,4 @@ You can include submodules in any folder structure you want. In the sample code 
 
 ## About the 'framerjs' npm package
 
-The version of the framer npm package is pointing to a very old commit, due to the npm version of Framer not being updated. If you want to work with a more advanced version, just replace the commit sha in the package.json file.
-
-## To do
-
-- Add Coffeelint
+The version of the framer npm package is pointing to a very old commit, due to the npm version of Framer not being updated. If you want to work with a more advanced version than the one provided with `framer-boilerplate`, just replace the commit sha in the package.json file.
