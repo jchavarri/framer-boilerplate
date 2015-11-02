@@ -4,9 +4,9 @@ A boilerplate Framer project that uses Gulp for live reload and Coffescript comp
 ## Get started
 
 - Run `npm install` from the project folder
-- Run `gulp` (if you have not installed it: `npm install --global gulp`)
-- Open `http://localhost:3000`
-- Start working in app/app.coffee. Any changes on the Framer code will refresh the browser
+- Run `gulp`. If you have not installed it: `npm install -g gulp`
+- Open `http://localhost:3000` on Chrome
+- Start working in `app/app.coffee`. Any changes on the Framer code will refresh the browser
 
 ## Submodules
 
