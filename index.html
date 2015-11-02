@@ -1,33 +1,36 @@
 <!DOCTYPE html>
-<html>
-	<head>
+<head>
 		<meta charset="utf-8">
-		
-		<meta name="format-detection" content="telephone=no">
+
 		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=640,initial-scale=0.5,user-scalable=no">
 
-		<script type="text/javascript">
-		// This automatically sets the right viewport scale on mobile devices
-		(function() {
- 		var scale = 1 / window.devicePixelRatio
- 		document.write("<meta name=\"viewport\" content=\"width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no\">")
-		})()
-		</script>
+		<style type="text/css" media="screen">
 
-		<link rel="apple-touch-icon" href="framer/images/icon-120.png">
-		<link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
-		<link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
-		<link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
-		<link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
-		<link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
+		* {
+			margin:0;
+			padding:0;
+			border:none;
+			-webkit-user-select:none;
+		}
 
-		<link rel="stylesheet" type="text/css" href="framer/style.css">
+		body {
+			background: black url('node_modules/framerjs/templates/Project/images/background.png')
+				repeat scroll top left;
+			font: 28px/1em "Helvetica";
+			color: #FFF;
+			-webkit-tap-highlight-color: rgba(0,0,0,0)
+		}
 
-		<script src="framer/framer.js"></script>
-		<script src="framer/framer.generated.js"></script>
-		<script src="framer/framer.modules.js"></script>
-		<script src="framer/framer.init.js"></script>
+		a {
+			color: #bfbfbf;
+		}
+
+		</style>
+
+		<script src="node_modules/framerjs/build/framer.js"></script>
 		<script src="app.js"></script>
 
 	</head>

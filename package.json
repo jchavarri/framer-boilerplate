@@ -2,8 +2,14 @@
   "name": "no-framer-studio",
   "version": "1.0.0",
   "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jchavarri/framer-boilerplate.git"
+  },
   "main": "app.js",
-  "dependencies": {},
+  "dependencies": {
+    "framerjs": "git+https://github.com/koenbok/Framer.git#8c8bac4"
+  },
   "devDependencies": {
     "browserify": "^11.0.1",
     "coffeeify": "^1.1.0",
@@ -16,8 +22,8 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "cd ./node_modules/framerjs && make"
   },
-  "author": "",
+  "author": "Javier Chávarri",
   "license": "ISC"
 }
