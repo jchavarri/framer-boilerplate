@@ -3,11 +3,21 @@ A boilerplate Framer project that uses Gulp for live reload and Coffescript comp
 
 ## Get started
 
-- `npm install`
-- Open `http://localhost:3000
-- Start working in app/app.coffee. You can include submodules in any folder structure you want
+- Run `npm install` from the project folder
+- Run `gulp` (if you have not installed it: `npm install --global gulp`)
+- Open `http://localhost:3000`
+- Start working in app/app.coffee. Any changes on the Framer code will refresh the browser
+
+## Submodules
+
+You can include submodules in any folder structure you want. In the sample code included, you can see a module called `myModule` on the `modules` folder. To include it:
+
+`MyModule = require("./modules/myModule.coffee")`
+
+## About the 'framerjs' npm package
+
+The version of the framer npm package is pointing to a very old commit, due to the npm version of Framer not being updated. If you want to work with a more advanced version, just replace the commit sha in the package.json file.
 
 ## To do
 
-- Add framer as a npm package
 - Add Coffeelint
