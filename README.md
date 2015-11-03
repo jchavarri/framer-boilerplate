@@ -1,5 +1,5 @@
 # framer-boilerplate
-A boilerplate FramerJS project that uses Gulp for live reload and Coffescript transpilation<sup>1</sup> + Browserify to include modules
+A boilerplate FramerJS project that uses Gulp for live reload and CoffeScript transpilation<sup>1</sup> + Browserify to include modules
 
 ## Why?
 
@@ -8,7 +8,7 @@ This project will help you if you:
 - Work usually editing Framer modules, that you need to change and test quickly
 - Have projects that depend on MANY Framer modules, and need to reorganize them in subfolders inside the `modules` folder
 - Need to work and transpile Framer CoffeeScript projects on non-OSX machines
-- Love Sublime, vi, <your_favorite_editor_here> and won't move to anything else :)
+- Love Sublime, vi, *your_favorite_editor_here* and won't move to anything else :)
 
 ## Get started
 
