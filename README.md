@@ -1,5 +1,14 @@
 # framer-boilerplate
-A boilerplate Framer project that uses Gulp for live reload and Coffescript compilation + Browserify to include modules
+A boilerplate FramerJS project that uses Gulp for live reload and Coffescript transpilation<sup>1</sup> + Browserify to include modules
+
+## Why?
+
+This project will help you if you:
+
+- Work usually editing Framer modules, that you need to change and test quickly
+- Have projects that depend on MANY Framer modules, and need to reorganize them in subfolders inside the `modules` folder
+- Need to work and transpile Framer CoffeeScript projects on non-OSX machines
+- Love Sublime, vi, <your_favorite_editor_here> and won't move to anything else :)
 
 ## Get started
 
@@ -18,8 +27,8 @@ If you want to create a Framer Studio project to be shared, you just need to:
 
 There are two known limitations for this export process:
 
-- Your prototype can have errors if the versions of Framer are not aligned, depending on the Framer features you are using
-- If you use complex submodules folder structure, your submodules won't be loaded (see 'Submodules' below)
+1. Your prototype can have errors if the versions of Framer are not aligned, depending on the Framer features you are using
+2. If you use complex submodules folder structure, your submodules won't be loaded (see 'Submodules' below)
 
 ## Submodules
 
@@ -36,3 +45,5 @@ You can create subfolders in the `modules` folder and include it using:
 ## About the 'framerjs' npm package
 
 The version of the existing Framer npm package is pointing to a very old commit, due to the package.json version of Framer not being updated. If you want to work with a more advanced version than the one provided with `framer-boilerplate`, just replace the commit sha in the package.json file and run `npm install`
+
+<sup>1</sup>Does this word even exist??
