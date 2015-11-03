@@ -26,6 +26,7 @@ gulp.task('coffee', function() {
     entries: ["./app/app.coffee"],
     debug: true,
     extensions: [".coffee"],
+    paths: ["./app/modules"],
     transform: ["coffeeify"] // npm install --save-dev coffeeify
     })
   .bundle()
@@ -52,6 +53,10 @@ gulp.task('coffee', function() {
 gulp.task('watch', function() {
   gulp.watch(['./*.html'], ['html']);
   gulp.watch('./app/**/*.coffee', ['coffee']);
-})
+});
+
+gulp.task('export', function() {
+  gulp.src(['app/**/*']).pipe(gulp.dest('export/framer-boilerplate.framer'));
+});
  
 gulp.task('default', ['coffee', 'webserver', 'html', 'watch']);

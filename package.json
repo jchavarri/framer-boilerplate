@@ -1,5 +1,5 @@
 {
-  "name": "no-framer-studio",
+  "name": "framer-boilerplate",
   "version": "1.0.0",
   "description": "",
   "repository": {
@@ -24,6 +24,5 @@
   "scripts": {
     "postinstall": "cd ./node_modules/framerjs && make"
   },
-  "author": "Javier Chávarri",
-  "license": "ISC"
+  "author": "Javier Chávarri"
 }
