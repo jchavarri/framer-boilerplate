@@ -8,7 +8,7 @@
   },
   "main": "app.js",
   "dependencies": {
-    "framerjs": "git+https://github.com/koenbok/Framer.git#8c8bac4"
+    "framerjs-prebuilt": "git+https://github.com/jchavarri/framerjs-prebuilt.git#master"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
@@ -22,7 +22,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "postinstall": "cd ./node_modules/framerjs && make"
+    "start": "gulp"
   },
   "author": "Javier Chávarri"
 }
