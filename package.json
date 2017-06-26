@@ -8,7 +8,7 @@
   },
   "main": "app.js",
   "dependencies": {
-    "framerjs-prebuilt": "git+https://github.com/jchavarri/framerjs-prebuilt.git#master"
+    "framerjs-prebuilt": "git+https://github.com/joetheday/framerjs-prebuilt.git#customized-for-windows"
   },
   "devDependencies": {
     "browserify": "^11.0.1",

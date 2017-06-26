@@ -1,27 +1,9 @@
-if not Framer.Device
-	# From framer.generated.js
-	Framer.Defaults.DeviceView = {"deviceScale":-1,"deviceType":"iphone-6-silver","contentScale":1,"orientation":0};
-	Framer.Defaults.DeviceComponent = {"deviceScale":-1,"deviceType":"iphone-6-silver","contentScale":1,"orientation":0};
-	Framer.Device = new Framer.DeviceView();
-	Framer.Device.setupContext();
-	# End from framer.generated.js 
+# Get Windows colors, type ramp, and motion library out of the box
+# For more info see https://github.com/Microsoft/windows-framer-toolkit
+{SystemColor} = require 'SystemColor'
+{Type} = require 'type'
+motion = require 'motionCurves'
 
-MyModule = require("myModule")
+# If you want the purple outlines, comment this out
+Framer.Extras.Hints.disable()
 
-MyModule.myFunction()
-
-
-bkgLayer = new BackgroundLayer
-	backgroundColor: "black"
-
-
-layerA = new Layer
-	x: 100
-	y: 100
-	width: 200
-	height: 200
-	borderRadius: 8
-	backgroundColor: "#28affa"
-
-layerA.on Events.Click, ->
-    print "Click!"

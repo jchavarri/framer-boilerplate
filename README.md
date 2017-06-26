@@ -18,7 +18,7 @@ To use this project, you will first need to install NodeJS. You can do it from [
 
 - Run `npm install` from the project folder. This will install all the required dependencies
 - Run `gulp`. If you have not installed it: `npm install -g gulp`
-- Open `http://localhost:3000` on Chrome
+- Open `http://localhost:3000` in Edge
 - Start working in `app/app.coffee`. Any changes on the Framer code will refresh the browser
 
 ## Exporting a project to Framer Studio
