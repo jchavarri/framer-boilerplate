@@ -4,7 +4,7 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jchavarri/framer-boilerplate.git"
+    "url": "git://github.com/joetheday/framer-boilerplate.git"
   },
   "main": "app.js",
   "dependencies": {
