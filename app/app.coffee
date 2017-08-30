@@ -7,3 +7,8 @@ motion = require 'motionCurves'
 # If you want the purple outlines, comment this out
 Framer.Extras.Hints.disable()
 
+helloWorld = new Type
+	uwpStyle: "header"
+	text: "Party!"
+	
+helloWorld.center()
