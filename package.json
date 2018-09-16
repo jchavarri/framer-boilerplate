@@ -4,11 +4,11 @@
   "description": "",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jchavarri/framer-boilerplate.git"
+    "url": "git://github.com/joetheday/framer-boilerplate.git"
   },
   "main": "app.js",
   "dependencies": {
-    "framerjs-prebuilt": "git+https://github.com/jchavarri/framerjs-prebuilt.git#master"
+    "framerjs-prebuilt": "git+https://github.com/joetheday/framerjs-prebuilt.git"
   },
   "devDependencies": {
     "browserify": "^11.0.1",
@@ -24,5 +24,8 @@
   "scripts": {
     "start": "gulp"
   },
-  "author": "Javier Chávarri"
+  "author": "Javier Chávarri",
+  "contributors": {
+    "Joe Day": "joeday@microsoft.com"
+  }
 }

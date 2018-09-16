@@ -1,24 +1,27 @@
 # framer-boilerplate
-A boilerplate FramerJS project that uses Gulp for live reload and CoffeScript transpilation<sup>1</sup> + Browserify to include modules
+A boilerplate FramerJS project that uses Gulp for live reload and CoffeScript transpilation<sup>1</sup> + Browserify to include modules.
+
+This project is forked from [jchavarri/framer-boilerplate](https://github.com/jchavarri/framer-boilerplate) which appears to have gone quiet for the time being. I'll keep it up to date and will add some Windows Fluent Design goodies by default courtesy of the [Windows Framer Toolkit](https://github.com/Microsoft/windows-framer-toolkit).
 
 ## Why?
 
 This project will help you if you:
 
-- Work usually editing Framer modules, that you need to change and test quickly
+- Use Framer modules
 - Have projects that depend on MANY Framer modules, and need to reorganize them in subfolders inside the `modules` folder
-- Need to work and transpile Framer CoffeeScript projects on operating systems different than OSX (mainly Windows and Linux).
-- Love Sublime, vi, *your_favorite_editor_here* and won't move to anything else :)
+- Are unable to use Framer Studio for whatever reason. This should work on any OS. 
+- Love VS Code, Atom, *your_favorite_editor_here* and don't feel like moving to anything else :)
 
 ## Before starting
 
-To use this project, you will first need to install NodeJS. You can do it from [the official website](https://nodejs.org/en/download/). 
+1. Install [NodeJS](https://nodejs.org/en/download/)
+2. Install [Git](https://git-scm.com/)
 
 ## Get started
 
 - Run `npm install` from the project folder. This will install all the required dependencies
 - Run `gulp`. If you have not installed it: `npm install -g gulp`
-- Open `http://localhost:3000` on Chrome
+- Open `http://localhost:3000` in a browser (Edge, Chrome, Firefox, etc...)
 - Start working in `app/app.coffee`. Any changes on the Framer code will refresh the browser
 
 ## Exporting a project to Framer Studio
@@ -36,18 +39,18 @@ There are two known limitations for this export process:
 
 ## Submodules
 
-You can add as many submodules as you want in the `modules` folder. In the sample code included, you can see a module called `myModule`. To include it:
+You can add as many submodules as you want in the `modules` folder. In the sample code included, there are a few modules from the [Windows Framer Toolkit](https://github.com/Microsoft/windows-framer-toolkit). At the top of `app.coffee` you can see how we reference the modules in the modules forlder: for instance:
 
-`MyModule = require("myModule")` (same as in Framer Studio)
+`{SystemColor} = require 'SystemColor'`
 
 You can create subfolders in the `modules` folder and include it using:
 
-`MyModule = require("subfolder/myModule")`
+`{MyModule} = require("subfolder/MyModule")`
 
-**NOTE:** At the moment, Framer Studio expects all submodules to be in a flat `modules` folder. If you create complex folder hierarchies inside the `modules` folder, you won't be able to open your project on Framer Studio.
+**NOTE:** At the moment, Framer Studio expects all submodules to be in a flat `modules` folder. If you create complex folder hierarchies inside the `modules` folder, you won't be able to open your project in Framer Studio.
 
-## About the 'framerjs-prebuilt' npm package
+## About the 'framerjs-prebuilt' github package
 
-To avoid compiling Framer on Windows machine, where the `make` command is not available by default, this boilerplate includes a precompiled version of Framer that I keep updating on [this repo](https://github.com/jchavarri/framerjs-prebuilt). This process is done manually at the moment, so let me know if you run into problems with the current version of FramerJS included. If you have any idea to make this process cleaner or easier, please let me know.
+To avoid compiling Framer on Windows machine, where the `make` command is not available by default, this boilerplate includes a precompiled version of Framer that I keep updating on [this repo](https://github.com/joeday/framerjs-prebuilt). If you notice the current version of Framer is out of date, feel free to send a pull request there with the latest. Instructions are included in [that repository's README.md](https://github.com/joetheday/framerjs-prebuilt/blob/master/README.md).
 
 <sup>1</sup>Does this word even exist??
